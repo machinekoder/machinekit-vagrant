@@ -68,6 +68,7 @@ Vagrant.configure(2) do |config|
   # documentation for more information about their specific syntax and use.
   config.vm.provision :shell, :path => "cookbook/gui.sh"
   config.vm.provision :shell, :path => "cookbook/machinekit-package.sh"
+  config.vm.provision :shell, :path => "cookbook/startx.sh"
 
   # config.vm.provision "shell", inline: <<-SHELL
   #   sudo apt-get update
