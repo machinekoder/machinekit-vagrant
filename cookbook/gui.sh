@@ -34,6 +34,12 @@ else
     sudo apt-get autoremove -y
 fi
 
+if [ $(query-package leafpad) -eq 1 ]; then
+    echo "Leafpad already installed"
+else
+    sudo apt-get install -y leafpad
+fi
+
 if [ $(query-package tilda) -eq 1 ]; then
     echo "Tilda already installed"
 else
@@ -54,5 +60,5 @@ else
     echo "Setting up keyboard layouts"
     sudo sed -i '/XKBLAYOUT/c\XKBLAYOUT="us,de,fr,ua,ru"' /etc/default/keyboard
     udevadm trigger --subsystem-match=input --action=change
+    # TODO add Keyboard Layout Switcher to Panel
 fi
-
