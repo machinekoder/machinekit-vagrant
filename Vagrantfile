@@ -5,8 +5,6 @@
 # configures the configuration version (we support older styles for
 # backwards compatibility). Please don't change it unless you know what
 # you're doing.
-# Require the reboot plugin.
-require './vagrant-provision-reboot-plugin'
 
 Vagrant.configure(2) do |config|
   # The most common configuration options are documented and commented below.
