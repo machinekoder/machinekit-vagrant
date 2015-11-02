@@ -60,5 +60,21 @@ else
     echo "Setting up keyboard layouts"
     sudo sed -i '/XKBLAYOUT/c\XKBLAYOUT="us,de,fr,ua,ru"' /etc/default/keyboard
     udevadm trigger --subsystem-match=input --action=change
-    # TODO add Keyboard Layout Switcher to Panel
+fi
+
+if [ -e /home/vagrant/.config/lxpanel/LXDE/panels/panel ]; then
+    echo "LXDE panel already prepared"
+else
+    echo "Preparing LXDE panel"
+    mkdir -p /home/vagrant/.config/lxpanel/LXDE/panels/
+    cp /home/vagrant/provision/files/panel /home/vagrant/.config/lxpanel/LXDE/panels/
+fi
+
+if [ -e /home/vagrant/Pictures/machinekit-tile.png ]; then
+    echo "Machinekit wallpaper already installed"
+else
+    echo "Installing Machinekit wallpaper"
+    cp /home/vagrant/provision/files/machinekit-tile.png /home/vagrant/Pictures/
+    mkdir -p /home/vagrant/.config/pcmanfm/LXDE/
+    cp /home/vagrant/provision/files/desktop-items-0.conf /home/vagrant/.config/pcmanfm/LXDE/
 fi

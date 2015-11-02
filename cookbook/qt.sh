@@ -60,7 +60,7 @@ if [ $QT_INSTALL -eq 1 ]; then
 
     # copy config file
     mkdir -p ~/.config/QtProject/
-    cp ~/provision/QtCreator.ini ~/.config/QtProject/QtCreator.ini
+    cp ~/provision/files/QtCreator.ini ~/.config/QtProject/QtCreator.ini
 
     cd Desktop
     echo -e "[Desktop Entry]" > qt-creator.desktop
@@ -72,7 +72,6 @@ if [ $QT_INSTALL -eq 1 ]; then
     echo -e "Terminal=false" >> qt-creator.desktop
     echo -e "Type=Application\n" >> qt-creator.desktop
 
-    cd ~/bin
     # download Qt Creator source
     QTC=~/Qt/Tools/QtCreator/bin/qtcreator
     QTCVERSION=`$QTC -version 2>&1 >/dev/null | grep 'Qt Creator' | grep 'based on' | head -c 16 | tail -c 5`
