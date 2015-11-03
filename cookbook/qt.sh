@@ -71,12 +71,14 @@ if [ $QT_INSTALL -eq 1 ]; then
     echo -e "StartupNotify=true" >> qt-creator.desktop
     echo -e "Terminal=false" >> qt-creator.desktop
     echo -e "Type=Application\n" >> qt-creator.desktop
+    cd ..
 
     # download Qt Creator source
+    cd bin
     QTC=~/Qt/Tools/QtCreator/bin/qtcreator
     QTCVERSION=`$QTC -version 2>&1 >/dev/null | grep 'Qt Creator' | grep 'based on' | head -c 16 | tail -c 5`
     QTCVERSION2=`echo $QTCVERSION | head -c 3`
-    wget https://download.qt.io/official_releases/qtcreator/$QTCVERSION2/$QTCVERSION/qt-creator-opensource-src-$QTCVERSION.tar.gz
+    wget https://download.qt.io/official_releases/qtcreator/$QTCVERSION2/$QTCVERSION/qt-creator-opensource-src-$QTCVERSION.tar.gz -nv
     tar xfz qt-creator*.tar.gz
     rm qt-creator*.tar.gz
     mv qt-creator*src* qt-creator
