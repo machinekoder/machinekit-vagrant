@@ -49,9 +49,10 @@ Vagrant.configure(2) do |config|
     vb.gui = true
     vb.name = "Machinekit SDK"
     vb.cpus = 2
-
     # Customize the amount of memory on the VM:
     vb.memory = "1024"
+    # Enable the shared clipboard:
+    vb.customize ['modifyvm', :id, '--clipboard', 'bidirectional']
   end
   #
   # View the documentation for the provider you are using for more
