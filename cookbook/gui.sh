@@ -67,6 +67,7 @@ if [ -e /home/vagrant/.config/lxpanel/LXDE/panels/panel ]; then
 else
     echo "Preparing LXDE panel"
     mkdir -p /home/vagrant/.config/lxpanel/LXDE/panels/
+    chown -R vagrant /home/vagrant/.config
     cp /home/vagrant/provision/files/panel /home/vagrant/.config/lxpanel/LXDE/panels/
 fi
 
@@ -76,5 +77,6 @@ else
     echo "Installing Machinekit wallpaper"
     cp /home/vagrant/provision/files/machinekit-tile.png /home/vagrant/Pictures/
     mkdir -p /home/vagrant/.config/pcmanfm/LXDE/
+    chown -R vagrant /home/vagrant/.config
     cp /home/vagrant/provision/files/desktop-items-0.conf /home/vagrant/.config/pcmanfm/LXDE/
 fi
