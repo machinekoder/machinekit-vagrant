@@ -26,9 +26,19 @@ else
     echo "Cloning mkwrapper-sim"
     cd /home/vagrant
     mkdir -p repos
+    chown -R vagrant repos
     cd repos
     git clone https://github.com/strahlex/mkwrapper-sim
     chown -R vagrant mkwrapper-sim
+fi
+
+if [ -e ./repos/anddemo ]; then
+    echo "anddemo already installed"
+else
+    echo "Cloning anddemo"
+    cd /home/vagrant/repos
+    git clone https://github.com/strahlex/anddemo
+    chown -R vagrant anddemo
 fi
 
 if grep -Fxq "REMOTE=1" /etc/linuxcnc/machinekit.ini; then
