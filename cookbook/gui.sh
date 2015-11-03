@@ -54,11 +54,11 @@ else
     sudo printf "[Desktop Entry]\nType=Application\nExec=tilda\n" >> ~/.config/autostart/tilda.desktop
 fi
 
-if grep "^XKBLAYOUT=\"us,de,fr,ua,ru\"" /etc/default/keyboard &>/dev/null; then
+if grep "^XKBLAYOUT=\"us,gb,de,fr,es,ru\"" /etc/default/keyboard &>/dev/null; then
     echo "Keyboard layouts already set-up"
 else
     echo "Setting up keyboard layouts"
-    sudo sed -i '/XKBLAYOUT/c\XKBLAYOUT="us,de,fr,ua,ru"' /etc/default/keyboard
+    sudo sed -i '/XKBLAYOUT/c\XKBLAYOUT="us,gb,de,fr,es,ru"' /etc/default/keyboard
     udevadm trigger --subsystem-match=input --action=change
 fi
 
