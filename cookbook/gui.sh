@@ -8,7 +8,7 @@ if type -P startlxde &>/dev/null; then
     echo "GUI is already installed";
 else
     echo "Install minimal GUI"
-    sudo apt-get install -y lxde-core lightdm
+    sudo apt-get install -y lxde-core lightdm iceweasel synaptic
 fi
 
 if grep "autologin-user=vagrant" /etc/lightdm/lightdm.conf &>/dev/null; then
