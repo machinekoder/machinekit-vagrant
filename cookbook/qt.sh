@@ -74,7 +74,8 @@ if [ $QT_INSTALL -eq 1 ]; then
     cd ..
 
     # download Qt Creator source
-    cd bin
+    mkdir -p /home/vagrant/bin
+    cd /home/vagrant/bin
     QTC=~/Qt/Tools/QtCreator/bin/qtcreator
     QTCVERSION=`$QTC -version 2>&1 >/dev/null | grep 'Qt Creator' | grep 'based on' | head -c 16 | tail -c 5`
     QTCVERSION2=`echo $QTCVERSION | head -c 3`

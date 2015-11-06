@@ -17,7 +17,7 @@ else
     sudo apt-get install -y --force-yes dovetail-automata-keyring
     sudo apt-get update
     #sudo apt-get upgrade -y
-    sudo apt-get install -y machinekit-posix avahi-daemon machinekit-dev
+    sudo apt-get install -y machinekit-posix avahi-daemon machinekit-dev git
 fi
 
 if [ -e ./repos/mkwrapper-sim ]; then

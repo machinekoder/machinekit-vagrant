@@ -8,6 +8,7 @@ if type -P startlxde &>/dev/null; then
     echo "GUI is already installed";
 else
     echo "Install minimal GUI"
+    sudo apt-get update
     sudo apt-get install -y lxde-core lightdm iceweasel synaptic
 fi
 
