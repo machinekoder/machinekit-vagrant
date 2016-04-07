@@ -10,11 +10,10 @@ if [ $(query-package machinekit-posix) -eq 1 ]; then
     #sudo apt-get update
     #sudo apt-get upgrade -y
 else
+    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 43DDF224
     sudo sh -c \
-         "echo 'deb http://deb.dovetail-automata.com jessie main' > \
-    /etc/apt/sources.list.d/machinekit.list;"
-    sudo apt-get update
-    sudo apt-get install -y --force-yes dovetail-automata-keyring
+    "echo 'deb http://deb.machinekit.io/debian jessie main' > \
+    /etc/apt/sources.list.d/machinekit.list"
     sudo apt-get update
     #sudo apt-get upgrade -y
     sudo apt-get install -y machinekit-posix avahi-daemon machinekit-dev git
