@@ -28,8 +28,8 @@ QT_INSTALL=1
 if [ -e ./Qt/components.xml ]; then
     echo "Qt already installed"
     cd Qt
-    VERSION=`grep '<ApplicationVersion' components.xml | cut -f2 -d">"|cut -f1 -d"<"`
-    if [ $VERSION == $QT_VERSION ]; then
+    VERSION=`grep '<ApplicationName' components.xml | cut -f2 -d">"|cut -f1 -d"<"`
+    if [ "$VERSION" == "Qt $QT_VERSION" ]; then
         echo "Qt version up to date"
         QT_INSTALL=0
     else
