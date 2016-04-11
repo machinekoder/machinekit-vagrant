@@ -1,5 +1,5 @@
 # Machinekit Vagrant
-Vagrant config for Machinekit, QtQuickVcp and the Machinekit SDK
+Vagrant config for [Machinekit](http://machinekit.io), [QtQuickVcp](https://github.com/strahlex/QtQuickVcp) and the [Machinekit SDK](https://github.com/strahlex/MachinekitSDK)
 
 ## Getting Started
 This gettings started will lead you trough the installation process.
@@ -8,11 +8,11 @@ This gettings started will lead you trough the installation process.
 If you have Git installed on your computer clone the Git repository to
 your computer:
 
-   git clone https://github.com/strahlex/machinekit-vagrant.git
+    git clone https://github.com/strahlex/machinekit-vagrant.git
 
-In case you don't have Git installed and you do not bother installing
-you can also just download the Git repository as
-[Zip file](https://github.com/strahlex/machinekit-vagrant/archive/master.zip).
+In case you **don't have Git installed** and you do not bother installing
+you can also just **download** the Git repository as
+[**Zip file**](https://github.com/strahlex/machinekit-vagrant/archive/master.zip).
 
 ### Install Vagrant
 Next you need to download and install
@@ -22,7 +22,7 @@ steps in the installer.
 ### Start Vagrant
 When installing Vagrant is completed start up a terminal on your
 computer. On Windows either type `cmd` in the start menu or
-Shift-Right-Click (Open Command Line here...) in your desired
+**Shift-Right-Click (Open Command Window here...)** in your desired
 folder. If you are not in the folder where you cloned or extracted the
 contents of the Git repository please navigate there using the `cd`
 command (`cd /my/cool/folder`).
