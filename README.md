@@ -1,7 +1,45 @@
-# machinekit-vagrant
-Vagrant config for Machinekit
+# Machinekit Vagrant
+Vagrant config for Machinekit, QtQuickVcp and the Machinekit SDK
+
+## Getting Started
+This gettings started will lead you trough the installation process.
+
+### Clone Git repository
+If you have Git installed on your computer clone the Git repository to
+your computer:
+
+   git clone https://github.com/strahlex/machinekit-vagrant.git
+
+In case you don't have Git installed and you do not bother installing
+you can also just download the Git repository as
+[Zip file](https://github.com/strahlex/machinekit-vagrant/archive/master.zip).
+
+### Install Vagrant
+Next you need to download and install
+[Vagrant](https://www.vagrantup.com/downloads.html). Just follow the
+steps in the installer.
+
+### Start Vagrant
+When installing Vagrant is completed start up a terminal on your
+computer. On Windows either type `cmd` in the start menu or
+Shift-Right-Click (Open Command Line here...) in your desired
+folder. If you are not in the folder where you cloned or extracted the
+contents of the Git repository please navigate there using the `cd`
+command (`cd /my/cool/folder`).
+
+Now continute by typing `vagrant up` in the terminal. You may be asked
+to install VirtualBox at some point. Just agree and lean back.
+
+Wait for the VM installation to complete.
+
+### Watch the tutorial
+Once everything has completed (take a look at the terminal) you can
+continue wiht the tutorial:
+
+[![Building Qt5 UIs with the MachinekitSDK](http://img.youtube.com/vi/IdB5769JtqI/0.jpg)</br>Building Qt5 UIs with the MachinekitSDK](https://www.youtube.com/watch?v=IdB5769JtqI&feature=youtu.be)
 
 ## Troubleshooting
+Common problems and solutions.
 
 ### VBoxManage.exe: error: Failed to create the host-only adapter
 Problem is either related to missing Windows UAC rights or an old
@@ -16,3 +54,9 @@ problem:
  * Remove the existing network adapter
  * Create a new adapter with the default settings
  * Restart Vagrant
+
+### 3D Acceleration is not working Well, thats embarrasing.
+This is a result of a
+[VirtualBox Bug](https://www.virtualbox.org/ticket/12746) with 64bit
+Linux guests and will hopefully get fixed in the future. For now just
+don't enable 3D acceleration and everything should be fine.
