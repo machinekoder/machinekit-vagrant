@@ -55,8 +55,8 @@ problem:
  * Create a new adapter with the default settings
  * Restart Vagrant
 
-### 3D Acceleration is not working Well, thats embarrasing.
-This is a result of a
+### 3D Acceleration is not working 
+Well, thats embarrasing. This is a result of a
 [VirtualBox Bug](https://www.virtualbox.org/ticket/12746) with 64bit
 Linux guests and will hopefully get fixed in the future. For now just
 don't enable 3D acceleration and everything should be fine.
