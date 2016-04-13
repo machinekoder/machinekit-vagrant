@@ -41,7 +41,7 @@ continue wiht the tutorial:
 ## Troubleshooting
 Common problems and solutions.
 
-### VBoxManage.exe: error: Failed to create the host-only adapter
+### Windows - VBoxManage.exe: error: Failed to create the host-only adapter
 Problem is either related to missing Windows UAC rights or an old
 version of VirtualBox on Windows 10. Try the following to solve the
 problem:
@@ -55,7 +55,23 @@ problem:
  * Create a new adapter with the default settings
  * Restart Vagrant
 
-### 3D Acceleration is not working 
+### Windows - VirtualBox crashing
+If VirtualBox keeps crashing when starting Vagrant it may be a problem
+with VirtualBox itself. Try to start VirtualBox manually and boot up
+the VM. If there is a VT-x problem it may be that your computer does
+not support hardware virtualiziaton. However, in some cases it is just
+related to the Hyper-V being enabled. To disable Hyper-V take a look
+at
+[this tutorial](http://www.eightforums.com/tutorials/42041-hyper-v-enable-disable-windows-8-a.html)
+
+### Desktop does not appear
+This problem can be related to the Vagrant VirtualBox GuestAdditions
+plugin. If you are not sure if you have it installed and you do not
+care to keep it installed please delete your Vagrant folders. These
+are `.vagrant` in the `machinekit-vagrant` directory and `.vagrant.d` in
+`C:\Users\<yourname>\`.
+
+### 3D Acceleration is not working
 Well, thats embarrasing. This is a result of a
 [VirtualBox Bug](https://www.virtualbox.org/ticket/12746) with 64bit
 Linux guests and will hopefully get fixed in the future. For now just
