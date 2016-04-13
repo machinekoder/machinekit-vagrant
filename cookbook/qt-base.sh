@@ -10,6 +10,6 @@ if [ $(query-package libxslt1.1) -eq 1 ]; then
 else
     echo "Installing Qt dependencies"
     apt-get update
-    apt-get install -y --force-yes build-essential gdb subversion dh-autoreconf libgl1-mesa-dev lynx pkg-config dovetail-automata-keyring python-protobuf libprotobuf-dev protobuf-compiler libnotify-bin libczmq-dev python-zmq libzmq3-dev libxslt1.1 git
+    apt-get install -y --force-yes build-essential gdb dh-autoreconf libgl1-mesa-dev pkg-config python-protobuf libprotobuf-dev protobuf-compiler python-zmq libzmq3-dev libxslt1.1 git
 fi
 su -c "source /home/vagrant/provision/qt.sh" vagrant
