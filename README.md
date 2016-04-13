@@ -38,6 +38,14 @@ continue wiht the tutorial:
 
 [![Building Qt5 UIs with the MachinekitSDK](http://img.youtube.com/vi/IdB5769JtqI/0.jpg)</br>Building Qt5 UIs with the MachinekitSDK](https://www.youtube.com/watch?v=IdB5769JtqI&feature=youtu.be)
 
+## Additional commands
+The following Vagrant commands are also useful:
+
+Update the Vagrant box: `vagrant provision`
+
+If something goes wrong and you need a clean state just fire up the
+command `vagrant destroy` followed by a `vagrant up` to get a fresh install.
+
 ## Troubleshooting
 Common problems and solutions.
 
