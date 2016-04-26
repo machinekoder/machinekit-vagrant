@@ -10,7 +10,7 @@ if [ $(query-package machinekit-posix) -eq 1 ]; then
     #sudo apt-get update
     #sudo apt-get upgrade -y
 else
-    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 43DDF224
+    sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 43DDF224
     sudo sh -c \
     "echo 'deb http://deb.machinekit.io/debian jessie main' > \
     /etc/apt/sources.list.d/machinekit.list"
