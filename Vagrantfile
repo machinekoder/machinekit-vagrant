@@ -70,6 +70,7 @@ Vagrant.configure(2) do |config|
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
   config.vm.provision :shell, :path => "cookbook/copy-user-provision.sh"
+  config.vm.provision :shell, :path => "cookbook/select-mirror.sh"
   config.vm.provision :shell, :path => "cookbook/gui.sh"
   config.vm.provision :shell, :path => "cookbook/vbox-guest-additions.sh"
   config.vm.provision :shell, :path => "cookbook/machinekit-package.sh"
