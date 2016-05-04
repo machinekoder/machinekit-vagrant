@@ -84,3 +84,10 @@ Well, thats embarrasing. This is a result of a
 [VirtualBox Bug](https://www.virtualbox.org/ticket/12746) with 64bit
 Linux guests and will hopefully get fixed in the future. For now just
 don't enable 3D acceleration and everything should be fine.
+
+### Username and password
+Using Vagrant you usually don't require a password to use `sudo` or
+login. However, in case you need the credentials here the are:
+
+    username: vagrant
+    password: vagrant
