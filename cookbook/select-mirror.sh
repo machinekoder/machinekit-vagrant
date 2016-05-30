@@ -11,4 +11,5 @@ else
     sudo mv sources.list /etc/apt/sources.list
     sudo apt-get clean
     sudo apt-get update
+    echo "done" > /etc/mirror-selected
 fi

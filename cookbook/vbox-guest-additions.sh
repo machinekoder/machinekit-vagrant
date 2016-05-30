@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
+export DEBIAN_FRONTEND=noninteractive
+
+query-package () {
+    dpkg-query -W -f='${Status}' $1 2>/dev/null | grep -c "ok installed"
+}
+
 if [ $(query-package virtualbox-guest-x11) -eq 1 ]; then
     echo "VirtualBox Guest Additions already installed"
-    #sudo apt-get update
-    #sudo apt-get upgrade -y
 else
     sudo sh -c \
     "echo 'deb http://debian.inode.at/debian jessie-backports main contrib non-free' > \
