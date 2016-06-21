@@ -80,6 +80,6 @@ Vagrant.configure(2) do |config|
   config.vm.provision :shell, :path => "cookbook/machinekit-package.sh"
   config.vm.provision :shell, :path => "cookbook/startx.sh"
   config.vm.provision :shell, :path => "cookbook/qt-base.sh"
-  config.vm.provision :shell, :path => "cookbook/pymachinetalk.sh"
+  config.vm.provision :shell, :path => "cookbook/machinetalk.sh"
 
 end
