@@ -20,8 +20,8 @@ else
 fi
 
 export DISPLAY=:0
-QT_BASE_VERSION=5.6
-QT_VERSION=5.6.0
+QT_BASE_VERSION=5.8
+QT_VERSION=5.8.0
 
 cd /home/vagrant/
 QT_INSTALL=1
