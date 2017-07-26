@@ -15,4 +15,6 @@ else
     /etc/apt/sources.list.d/machinekit.list"
     sudo apt-get update
 fi
-sudo apt-get install -y machinekit-posix avahi-daemon machinekit-dev git
+#sudo apt-get install -y machinekit-posix avahi-daemon machinekit-dev git
+#machinekit-dev deprecated: https://groups.google.com/forum/#!searchin/machinekit/xenomai|sort:date/machinekit/8FNH1CixtKU/OwZCmvSkAAAJ
+sudo apt-get install -y machinekit-posix avahi-daemon git
